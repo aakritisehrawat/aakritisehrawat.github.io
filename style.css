@@ -67,6 +67,8 @@ body {
 model-viewer {
   width: 100%;
   height: 100%;
+  background-color: transparent;
+  --poster-color: transparent;
 }
 
 .icon-link {
@@ -320,68 +322,82 @@ model-viewer {
   transition: transform 0.3s ease;
 }
 
-.model-box {
-  grid-column: 2;
-  justify-self: center;
-  width: 100%;
-  max-width: 500px;
-  background: #f8f8f8;
-  position: relative;
-  cursor: pointer;
+.model-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 2rem;
   padding: 2rem;
-  aspect-ratio: 1;
-  border: 2px dashed #ddd;
+  align-items: center;
 }
 
-.model-placeholder {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
-}
-
-.model-placeholder i {
-  font-size: 3rem;
-  color: #ffd700;
-  transition: transform 0.3s ease;
-}
-
-.model-text {
-  font-size: 1.1rem;
-  color: #666;
-  margin: 0;
-}
-
-/* Hover effects */
-.model-box:hover {
-  background: #f0f0f0;
-}
-
-.model-box:hover i {
-  transform: rotate(45deg);
-}
-
-/* If you want a different border style for the model box */
 .model-box {
-  border: 2px dashed #ddd;
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  gap: 2rem;
+  align-items: center;
+  width: 300%;
+  max-width: 300%;
+  padding: 2rem;
+  margin-right: -100%;
+  height: 500px;
+  background-color: var(--dark-lavender); /* Default color */
 }
 
-/* Add some spacing between sections */
-.second-collection {
-  margin-top: 4rem; /* Space from previous section */
-  background: #fff; /* Different background to distinguish sections */
+.model-description {
+  grid-column: 2;
+  padding: 2rem;
 }
 
-/* Optional: Add a different accent color for this section */
-.second-collection .section-title::after {
-  background-color: #9932cc; /* Different color for variety */
+/* Style the description text */
+.model-description h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
 }
 
-/* Optional: Different hover effect for this section */
-.second-collection .scroll-item:hover {
-  transform: translateY(-5px) scale(1.02);
+.model-description p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.model-features {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.model-features li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #555;
+}
+
+.model-features li:before {
+  content: "•";
+  color: var(--pastel-pink);
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .model-section {
+    grid-template-columns: 1fr;
+  }
+
+  .model-description {
+    grid-column: 1;
+    text-align: center;
+  }
+
+  .model-features li {
+    text-align: left;
+  }
 }
 
 /* Footer Styles */
@@ -529,6 +545,9 @@ footer {
   --pastel-lavender: #e6e6fa;
   --pastel-mint: #dbf0e8;
   --pastel-yellow: #fff3d6;
+  --dark-pink: #eec1cc;
+  --dark-lavender: #d4d4e8;
+  --dark-mint: #c5e0d6;
 }
 
 /* Section backgrounds */
@@ -625,5 +644,348 @@ h3 {
 @media (max-width: 480px) {
   h3 {
     font-size: 0.9rem;
+  }
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr; /* Made first column bigger */
+  gap: 2rem;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 1400px; /* Increased max-width to accommodate larger box */
+  padding: 0 2rem;
+}
+
+.model-box {
+  grid-column: 1;
+  width: 100%;
+  aspect-ratio: 1;
+  min-height: 500px; /* Added minimum height */
+  background: #fefaf6;
+  border: 2px dashed #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.model-text {
+  font-size: 1.4rem; /* Increased text size to match larger box */
+}
+
+.description-box {
+  grid-column: 2;
+  padding: 2rem;
+}
+
+.description-box p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  color: #555;
+  margin-bottom: 0.8rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.feature-list li:before {
+  content: "•";
+  color: var(--pastel-pink);
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .model-box {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .model-box {
+    min-height: 350px;
+  }
+}
+
+.description-box {
+  grid-column: 2;
+  padding: 2rem;
+}
+
+.orchid-info {
+  color: #555;
+}
+
+.main-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.orchid-details,
+.care-instructions {
+  margin-bottom: 2rem;
+}
+
+h4 {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.2rem;
+  position: relative;
+  color: #666;
+}
+
+.feature-list li:before {
+  content: "•";
+  color: var(--pastel-pink);
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .description-box {
+    padding: 1rem;
+  }
+
+  .orchid-info {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  .main-description {
+    font-size: 1rem;
+  }
+}
+
+.scroll-item.model-box {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  gap: 2rem;
+  align-items: center;
+  width: 300%;
+  max-width: 300%;
+  padding: 2rem;
+  margin-right: -100%;
+  height: 500px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.model-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #ddd;
+  aspect-ratio: auto;
+}
+
+.model-info {
+  width: 100%;
+  padding: 1rem 2rem;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.model-info h4 {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.feature-list li {
+  color: #666;
+  margin-bottom: 0.8rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.feature-list li:before {
+  content: "•";
+  color: var(--pastel-pink);
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scroll-item.model-box {
+    width: 200%;
+    height: 500px;
+  }
+}
+
+/* Update scroll section to handle wider content */
+.scroll-section {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 2rem 0;
+}
+
+/* Style for each model box matching its section */
+.scroll-item.model-box:nth-child(1) {
+  background: var(--dark-pink);
+}
+
+.scroll-item.model-box:nth-child(2) {
+  background: var(--dark-lavender);
+}
+
+.scroll-item.model-box:nth-child(3) {
+  background: var(--dark-mint);
+}
+
+/* Navbar mobile adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+    height: 70px; /* Reduced height for mobile */
+  }
+
+  /* Adjust body padding to prevent content hiding behind navbar */
+  body {
+    padding-top: 70px;
+  }
+}
+
+/* Hero section mobile adjustments */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+    padding: 4rem 1rem; /* Added padding */
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 0 1rem;
+    margin-top: 2rem; /* Space from navbar */
+  }
+
+  h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+    margin-top: 2rem; /* Space from top */
+  }
+
+  .highlight-text {
+    font-size: 3rem; /* Adjusted size for mobile */
+  }
+
+  .cta-button {
+    margin: 2rem auto; /* Center the button */
+    display: block;
+    width: fit-content;
+  }
+}
+
+/* Grid layout adjustments for mobile */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .grid-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .grid-box img {
+    width: 100%;
+    height: auto;
+    min-height: 300px; /* Minimum height for images */
+    object-fit: cover;
+  }
+
+  /* Adjust scroll section for mobile */
+  .scroll-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .scroll-item {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  /* 3D model box adjustments */
+  .scroll-item.model-box {
+    width: 100%;
+    grid-template-columns: 1fr;
+    height: auto;
+    margin-right: 0;
+  }
+
+  .model-placeholder {
+    width: 100%;
+    height: 400px;
+  }
+
+  .model-info {
+    padding: 1rem;
+  }
+}
+
+/* Additional spacing fixes */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+    padding: 0 1rem;
   }
 }
