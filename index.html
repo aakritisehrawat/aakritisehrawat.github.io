@@ -6,9 +6,27 @@
     <title>The future of orchids</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="navbar">
+      <div class="logo">
+        <a href="/">
+          <img
+            src="path/to/your/logo.png"
+            alt="Your Brand Name"
+            class="logo-img"
+          />
+        </a>
+      </div>
       <div class="menu-icon" onclick="toggleMenu()">☰</div>
       <ul class="nav-links" id="navLinks">
         <li><a href="#">Home</a></li>
@@ -16,21 +34,195 @@
         <li><a href="#">Gallery</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
+
+      <div class="nav-icons">
+        <a href="#" class="icon-link"><i class="fas fa-search"></i></a>
+        <a href="#" class="icon-link"><i class="fas fa-user"></i></a>
+        <a href="#" class="icon-link"><i class="fas fa-shopping-cart"></i></a>
+      </div>
     </nav>
 
     <header class="hero">
-      <h1>The future of orchids</h1>
+      <div class="hero-content">
+        <h1>THE FUTURE OF</h1>
+        <span class="highlight-text">Orchids</span>
+        <p class="hero-text">
+          "The Future of Orchids," running from January 27th to April 28th,
+          2024. This exhibition features approximately 350 live orchids and
+          newly commissioned artwork by Phaan Howng, inspired by the
+          Smithsonian's orchid collection and 3D scans.
+        </p>
+        <a href="#" class="cta-button">Book Now</a>
+      </div>
     </header>
 
     <section class="scroll-section">
+      <h2 class="section-title">Encyclia tampensis</h2>
       <div class="scroll-container">
-        <div class="scroll-item">Wright Brothers</div>
-        <div class="scroll-item">X-1</div>
-        <div class="scroll-item">Item 3</div>
-        <div class="scroll-item">Item 4</div>
-        <div class="scroll-item">Item 5</div>
+        <div class="scroll-item">
+          <h3 class="orchid-title">Lycaste virginalis: Bloom</h3>
+          <div class="orchid-image">
+            <img
+              src="/images/Encyclia tampensis.jpg"
+              alt="Phalaenopsis Orchid"
+            />
+          </div>
+        </div>
+        <div class="scroll-item">
+          <h3 class="orchid-title">Dendrobium</h3>
+          <div class="orchid-image">
+            <img
+              src="/images/Encyclia tampensis-1.png"
+              alt="Dendrobium Orchid"
+            />
+          </div>
+        </div>
+        <div class="scroll-item">
+          <h3 class="orchid-title">Cattleya</h3>
+          <div class="orchid-image">
+            <img src="/images/Encyclia tampensis-3.png" alt="Cattleya Orchid" />
+          </div>
+        </div>
+        <div class="scroll-item model-box">
+          <h3 class="orchid-title">3D View</h3>
+          <div class="model-placeholder">
+            <i class="fas fa-cube"></i>
+            <!-- Font Awesome 3D cube icon -->
+            <p class="model-text">View in 3D</p>
+          </div>
+        </div>
       </div>
     </section>
+
+    <section class="scroll-section second-collection">
+      <h2 class="section-title">Angraecum magdalenae</h2>
+      <div class="scroll-container">
+        <div class="scroll-item">
+          <h3 class="orchid-title">Lady Slipper</h3>
+          <div class="orchid-image">
+            <img
+              src="/images/Angraecum magdalenae.png"
+              alt="Lady Slipper Orchid"
+            />
+          </div>
+        </div>
+
+        <div class="scroll-item">
+          <h3 class="orchid-title">Ghost Orchid</h3>
+          <div class="orchid-image">
+            <img src="/images/Angraecum magdalenae-2.png" alt="Ghost Orchid" />
+          </div>
+        </div>
+
+        <div class="scroll-item">
+          <h3 class="orchid-title">Blue Mystique</h3>
+          <div class="orchid-image">
+            <img
+              src="/images/Lycaste virginalis-3.png"
+              alt="Blue Mystique Orchid"
+            />
+          </div>
+        </div>
+
+        <div class="scroll-item model-box">
+          <h3 class="orchid-title">3D View</h3>
+          <div class="model-placeholder">
+            <i class="fas fa-cube"></i>
+            <p class="model-text">View in 3D</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scroll-section third-collection">
+      <h2 class="section-title">Exotic Orchid Collection</h2>
+      <div class="scroll-container">
+        <div class="scroll-item">
+          <h3 class="orchid-title">Dancing Lady</h3>
+          <div class="orchid-image">
+            <img src="/images/Vanda coerulea.png" alt="Dancing Lady Orchid" />
+          </div>
+        </div>
+
+        <div class="scroll-item">
+          <h3 class="orchid-title">Tiger Orchid</h3>
+          <div class="orchid-image">
+            <img src="/images/Vanda Coerulea-2.png" alt="Tiger Orchid" />
+          </div>
+        </div>
+
+        <div class="scroll-item">
+          <h3 class="orchid-title">Fire Orchid</h3>
+          <div class="orchid-image">
+            <img src="/images/Vanda Coerulea-3.png" alt="Fire Orchid" />
+          </div>
+        </div>
+
+        <div class="scroll-item model-box">
+          <h3 class="orchid-title">3D View</h3>
+          <div class="model-placeholder">
+            <i class="fas fa-cube"></i>
+            <p class="model-text">View in 3D</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Company Info -->
+        <div class="footer-section">
+          <h4>Orchid Haven</h4>
+          <p>Bringing nature's beauty to your doorstep</p>
+          <div class="contact-info">
+            <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+            <p><i class="fas fa-envelope"></i> info@orchidhaven.com</p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 123 Flower Street, Garden
+              City
+            </p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Care Guide</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+          <h4>Connect With Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <p>Subscribe for updates and exclusive offers</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 Orchid Haven. All rights reserved.</p>
+      </div>
+    </footer>
 
     <script src=""></script>
   </body>
