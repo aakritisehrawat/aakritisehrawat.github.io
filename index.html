@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The future of orchids</title>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
     <link
@@ -12,7 +16,7 @@
     />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -21,7 +25,7 @@
       <div class="logo">
         <a href="/">
           <img
-            src="path/to/your/logo.png"
+            src="/images/Orchid-logo.png"
             alt="Your Brand Name"
             class="logo-img"
           />
@@ -52,22 +56,25 @@
           newly commissioned artwork by Phaan Howng, inspired by the
           Smithsonian's orchid collection and 3D scans.
         </p>
-        <a href="#" class="cta-button">Book Now</a>
+        <a href="#" class="cta-button gradient-btn">Book Now</a>
       </div>
     </header>
 
-    <section class="scroll-section">
+    <section class="scroll-section pastel-pink">
       <div class="section-header">
         <h2 class="section-title">Encyclia tampensis</h2>
         <p class="section-description">
-          Discover our most popular orchids, carefully selected for their
-          stunning beauty and ease of care. Each variety has been nurtured to
-          perfection in our specialized greenhouses.
+          Encyclia tampensis var. alba is a type of orchid featured in the
+          Smithsonian Gardens and the United States Botanic Garden's 28th annual
+          orchid exhibition, "The Future of Orchids: Conservation and
+          Collaboration." The exhibition, which runs from January 27, 2024, to
+          April 28, 2024, at the Smithsonian American Art Museum and National
+          Portrait Gallery, showcases around 350 live orchids.
         </p>
       </div>
       <div class="scroll-container">
         <div class="scroll-item">
-          <h3 class="orchid-title">Lycaste virginalis: Bloom</h3>
+          <h3 class="orchid-title">Closer View</h3>
           <div class="orchid-image">
             <img
               src="/images/Encyclia tampensis.jpg"
@@ -76,7 +83,7 @@
           </div>
         </div>
         <div class="scroll-item">
-          <h3 class="orchid-title">Dendrobium</h3>
+          <h3 class="orchid-title">Natural View</h3>
           <div class="orchid-image">
             <img
               src="/images/Encyclia tampensis-1.png"
@@ -85,34 +92,39 @@
           </div>
         </div>
         <div class="scroll-item">
-          <h3 class="orchid-title">Cattleya</h3>
+          <h3 class="orchid-title">Perspective View</h3>
           <div class="orchid-image">
             <img src="/images/Encyclia tampensis-3.png" alt="Cattleya Orchid" />
           </div>
         </div>
         <div class="scroll-item model-box">
           <h3 class="orchid-title">3D View</h3>
-          <div class="model-placeholder">
-            <i class="fas fa-cube"></i>
-            <!-- Font Awesome 3D cube icon -->
-            <p class="model-text">View in 3D</p>
-          </div>
+          <model-viewer
+            src="/images/Encyclia_tampensis_var-150k-4096_std.glb"
+            alt="A 3D model of an astronaut"
+            ar
+            auto-rotate
+            camera-controls
+          ></model-viewer>
         </div>
       </div>
     </section>
 
-    <section class="scroll-section second-collection">
+    <section class="scroll-section second-collection pastel-lavender">
       <div class="section-header">
         <h2 class="section-title">Lycaste virginalis: Bloom</h2>
         <p class="section-description">
-          Explore our exclusive selection of rare and exotic orchids, featuring
-          unique varieties from around the world. These extraordinary specimens
-          are perfect for collectors and enthusiasts.
+          "Lycaste virginalis: Bloom" is the name of one of the orchid blooms
+          included in the Smithsonian Gardens and the United States Botanic
+          Garden's 28th annual orchid exhibition. This exhibition, titled "The
+          Future of Orchids: Conservation and Collaboration," features
+          approximately 350 live orchids and will be on display from January 27
+          to April 28, 2024.
         </p>
       </div>
       <div class="scroll-container">
         <div class="scroll-item">
-          <h3 class="orchid-title">Lady Slipper</h3>
+          <h3 class="orchid-title">Closer View</h3>
           <div class="orchid-image">
             <img
               src="/images/Angraecum magdalenae.png"
@@ -122,14 +134,14 @@
         </div>
 
         <div class="scroll-item">
-          <h3 class="orchid-title">Ghost Orchid</h3>
+          <h3 class="orchid-title">Natural View</h3>
           <div class="orchid-image">
             <img src="/images/Angraecum magdalenae-2.png" alt="Ghost Orchid" />
           </div>
         </div>
 
         <div class="scroll-item">
-          <h3 class="orchid-title">Blue Mystique</h3>
+          <h3 class="orchid-title">Perspective View</h3>
           <div class="orchid-image">
             <img
               src="/images/Lycaste virginalis-3.png"
@@ -140,21 +152,29 @@
 
         <div class="scroll-item model-box">
           <h3 class="orchid-title">3D View</h3>
-          <div class="model-placeholder">
-            <i class="fas fa-cube"></i>
-            <p class="model-text">View in 3D</p>
-          </div>
+          <model-viewer
+            src="/images/Lycaste_virginalis-150k-4096_std.glb"
+            alt="A 3D model of an astronaut"
+            ar
+            auto-rotate
+            camera-controls
+          ></model-viewer>
         </div>
       </div>
     </section>
 
-    <section class="scroll-section third-collection">
+    <section class="scroll-section third-collection pastel-mint">
       <div class="section-header">
         <h2 class="section-title">Vanda coerulea: Bloom</h2>
         <p class="section-description">
-          Experience the magic of our exotic orchids, known for their
-          distinctive patterns and vibrant colors. These showstoppers will bring
-          a touch of tropical paradise to your space.
+          "Vanda coerulea: Bloom" is another orchid bloom featured in the
+          Smithsonian Gardens and the United States Botanic Garden's 28th annual
+          orchid exhibition, "The Future of Orchids: Conservation and
+          Collaboration." This exhibition, which runs from January 27 to April
+          28, 2024, will be held in the Kogod Courtyard of the Smithsonian
+          American Art Museum and National Portrait Gallery in Washington, D.C.
+          The exhibition showcases approximately 350 live orchids from the
+          Smithsonian Gardens’ Orchid Collection.
         </p>
       </div>
       <div class="scroll-container">
@@ -181,10 +201,13 @@
 
         <div class="scroll-item model-box">
           <h3 class="orchid-title">3D View</h3>
-          <div class="model-placeholder">
-            <i class="fas fa-cube"></i>
-            <p class="model-text">View in 3D</p>
-          </div>
+          <model-viewer
+            src="/images/Vanda_coerulea-150k-4096_std.glb"
+            alt="A 3D model of an astronaut"
+            ar
+            auto-rotate
+            camera-controls
+          ></model-viewer>
         </div>
       </div>
     </section>
