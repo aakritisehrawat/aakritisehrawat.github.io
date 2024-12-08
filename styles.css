@@ -1,0 +1,11 @@
+.dropdown-menu {
+  display: none; /* Initially hide the menu */
+}
+
+.dropdown-menu.show {
+  display: block; /* Show the menu when 'show' class is added */
+}
+
+.audio-container {
+  text-align: center; /* Center the audio player */
+}
